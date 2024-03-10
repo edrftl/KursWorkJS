@@ -22,7 +22,7 @@ addVideo.onclick = (event) => {
     let item = new Film(nameIn.value, +yearIn.value, tagsIn.value.split(' '), authorIn.value, countryIn.value, timeIn.value, ratingIn.value, urlIn.value);
     films.push(item);
     console.log(films);
-    // addFilmToList(item);
+    // addFilmToList(item);цвцацуацуа
 }
 
 // function addFilmToList(item) {
