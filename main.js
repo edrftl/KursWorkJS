@@ -25,7 +25,7 @@ addVideo.onclick = (event) => {
     // addFilmToList(item);цвцацуацуа
 }
 
-// function addFilmToList(item) {
+// function addFilmToList(item) { цу
 //     filmList.innerHTML += `
 //         <div class="col mb-4">
 //             <div class="card bg-dark text-light">
