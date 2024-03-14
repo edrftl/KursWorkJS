@@ -1,42 +1,26 @@
 const filmList = document.querySelector('.row');
-const addVideo = document.querySelector('#add-video');
-const films = [];
 
-const form = document.forms.create_form;
-const nameIn = form.elements.name;
-const yearIn = form.elements.year;
-const tagsIn = form.elements.tags;
-const authorIn = form.elements.author;
-const countryIn = form.elements.country;
-const timeIn = form.elements.time;
-const ratingIn = form.elements.rating;
-const urlIn = form.elements.url;
+const createTab = document.querySelector('#create-video-tab');
 
-// document.getElementById('searchByNameBtn').onclick = () => {
-//     const searchTerm = form.elements.search_input.value.toLowerCase();
-//     loadProductsToTable(films.filter(x => x.name.toLowerCase().includes(searchTerm)));
-// };
+//const addVideo = document.querySelector('#add-video');
+var films = [];
 
-addVideo.onclick = (event) => {
-    event.preventDefault();
-    let item = new Film(nameIn.value, +yearIn.value, tagsIn.value.split(' '), authorIn.value, countryIn.value, timeIn.value, ratingIn.value, urlIn.value);
-    films.push(item);
-    console.log(films);
-    // addFilmToList(item);цвцацуацуа
+
+
+
+function addFilmToList(item) {
+    filmList.innerHTML += `
+    <div class="col mb-4">
+        <div class="card bg-dark text-light">
+            <img src="${item.url}" class="card-img-top"
+                alt="${item.name}">
+            <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">${item.year}</p>
+            </div>
+        </div>
+    </div>`;
 }
-
-// function addFilmToList(item) { цу
-//     filmList.innerHTML += `
-//         <div class="col mb-4">
-//             <div class="card bg-dark text-light">
-//                 <img src="${item.url}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title">${item.name}</h5>
-//                     <p class="card-text">${item.year}</p>
-//                 </div>
-//             </div>
-//         </div>`;
-// }
 
 function loadProductsToTable(items) {
     filmList.innerHTML = "";
@@ -62,7 +46,7 @@ class Film {
     }
 }
 
-
+// export { films, Film };
 
 
 
